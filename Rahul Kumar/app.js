@@ -6,6 +6,6 @@ async function getJokes(){
     let res = await fetch("https://official-joke-api.appspot.com/random_joke");
     let data = await res.json();
     console.log(data);
-    para.innerHTML += `<i>${data.punchline}</i>`
-    para2.innerHTML += `<i>${data.setup}</i>`
+    para.innerHTML = `<b style="color: red;">setup: </b><i>${data.punchline}</i>`
+    para2.innerHTML = `<b style="color: red;">punchline: </b><i>${data.setup}</i>`
 }
